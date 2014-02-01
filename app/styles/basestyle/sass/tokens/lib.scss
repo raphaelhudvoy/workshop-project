@@ -1,0 +1,87 @@
+/* px/rem */
+@function parseInt($n) {
+  @return $n / ($n * 0 + 1);
+}
+@mixin rem($property, $values) {
+  $px : ();
+  $rem: ();
+  
+  @each $value in $values {
+   
+    @if $value == 0 or $value == auto {
+      $px : append($px , $value);
+      $rem: append($rem, $value);
+    }
+    
+    @else { 
+      $unit: unit($value);
+      $val: parseInt($value);
+      
+      @if $unit == "px" {
+        $px : append($px,  $value);
+        $rem: append($rem, ($val / 10 + rem));
+      }
+      
+      @if $unit == "rem" {
+        $px : append($px,  ($val * 10 + px));
+        $rem: append($rem, $value);
+      }
+    }
+  }
+  
+  @if $px == $rem {
+    #{$property}: $px; 
+  } @else {
+    #{$property}: $px;
+    #{$property}: $rem;
+  }
+}
+
+
+/* aspect-ratios */
+$cu-display-aspect-ratio-1:1.25;
+$cu-display-aspect-ratio-2:1.33;
+$cu-display-aspect-ratio-3:1.6;
+$cu-display-aspect-ratio-4:1.78;
+
+
+/* primary colors */
+
+
+/* primary proportions */
+$cu-base-rembase:10px;
+$cu-base-html-fontsize:62.5%;
+$cu-base-body-fontsize:1.6rem;
+
+
+/* primary icons */
+$cu-base-icon-calendar:"&#128197;";
+$cu-base-icon-cycle:"&#128260;";
+$cu-base-icon-reccurent:"&#59249;";
+$cu-base-icon-clock:"&#128340;";
+$cu-base-icon-location:"&#59172;";
+$cu-base-icon-users:"&#128101;";
+$cu-base-icon-adduser:"&#59136;";
+$cu-base-icon-bubble:"&#59160;";
+$cu-base-icon-bubbles:"&#59168;";
+$cu-base-icon-key:"&#128273;";
+$cu-base-icon-question:"&#10067;";
+$cu-base-icon-book:"&#128213;";
+$cu-base-icon-camera:"&#128247;";
+$cu-base-icon-lock:"&#128274;";
+$cu-base-icon-unlock:"&#128275;";
+$cu-base-icon-signin:"&#59200;";
+$cu-base-icon-signout:"&#59201;";
+$cu-base-icon-check:"&#10003;";
+$cu-base-icon-folder:"#&#128193";
+$cu-base-icon-keyboard:"&#9000;";
+$cu-base-icon-phone:"&#128222;";
+$cu-base-icon-like:"&#128077;";
+$cu-base-icon-dislike:"&#128078;";
+$cu-base-icon-eye:"&#59146;";
+$cu-base-icon-education:"&#127891;";
+$cu-base-icon-clockwork:"&#9881;";
+$cu-base-icon-spam:"&#9873;";
+$cu-base-icon-heart:"&hearts;";
+$cu-base-icon-ticket:"&#127915;";
+$cu-base-icon-thermometer:"&#128255;";
