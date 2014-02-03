@@ -1,1 +1,25 @@
-@import "../tokens/lib"
+@import "../tokens/lib";
+
+/* grid */
+@mixin grid-row() {
+	.div[class*="row"] {
+		float:left;
+		width:100%;
+		@include box-sizing(border-box);
+	}
+}
+@mixin grid-col() {
+	$class-slug: col/* !default;
+	@for $i from 1 through 12 {
+		.#{$class-slug}-#{$i} {
+			width:(12/$i)*100%;
+		}
+	}
+}
+/* inputs */
+@mixin input-text() {
+	
+}
+@mixin input-submit() {
+	
+}

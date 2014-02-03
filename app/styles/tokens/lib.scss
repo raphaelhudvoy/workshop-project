@@ -30,58 +30,73 @@
   }
   
   @if $px == $rem {
-    #{$property}: $px; 
+    #{$property}: $px;
   } @else {
     #{$property}: $px;
     #{$property}: $rem;
   }
 }
 
-
 /* aspect-ratios */
-$cu-display-aspect-ratio-1:1.25;
-$cu-display-aspect-ratio-2:1.33;
-$cu-display-aspect-ratio-3:1.6;
-$cu-display-aspect-ratio-4:1.78;
+$ws-display-aspect-ratio-1:1.25;
+$ws-display-aspect-ratio-2:1.33;
+$ws-display-aspect-ratio-3:1.6;
+$ws-display-aspect-ratio-4:1.78;
 
 
 /* primary colors */
-
+$ws-base-red:#78383b;
+$ws-base-blue:#375b75;
+$ws-base-yellow:#c1c497;
+$ws-base-orange:mix($ws-base-red, $ws-base-yellow);
+$ws-base-green:mix($ws-base-yellow, $ws-base-blue);
+$ws-base-teal:mix($ws-base-blue, $ws-base-green);
 
 /* primary proportions */
-$cu-base-rembase:10px;
-$cu-base-html-fontsize:62.5%;
-$cu-base-body-fontsize:1.6rem;
+$ws-base-rembase:10px;
+$ws-base-html-fontsize:62.5%;
+$ws-base-body-fontsize:1.6rem;
 
 
 /* primary icons */
-$cu-base-icon-calendar:"&#128197;";
-$cu-base-icon-cycle:"&#128260;";
-$cu-base-icon-reccurent:"&#59249;";
-$cu-base-icon-clock:"&#128340;";
-$cu-base-icon-location:"&#59172;";
-$cu-base-icon-users:"&#128101;";
-$cu-base-icon-adduser:"&#59136;";
-$cu-base-icon-bubble:"&#59160;";
-$cu-base-icon-bubbles:"&#59168;";
-$cu-base-icon-key:"&#128273;";
-$cu-base-icon-question:"&#10067;";
-$cu-base-icon-book:"&#128213;";
-$cu-base-icon-camera:"&#128247;";
-$cu-base-icon-lock:"&#128274;";
-$cu-base-icon-unlock:"&#128275;";
-$cu-base-icon-signin:"&#59200;";
-$cu-base-icon-signout:"&#59201;";
-$cu-base-icon-check:"&#10003;";
-$cu-base-icon-folder:"#&#128193";
-$cu-base-icon-keyboard:"&#9000;";
-$cu-base-icon-phone:"&#128222;";
-$cu-base-icon-like:"&#128077;";
-$cu-base-icon-dislike:"&#128078;";
-$cu-base-icon-eye:"&#59146;";
-$cu-base-icon-education:"&#127891;";
-$cu-base-icon-clockwork:"&#9881;";
-$cu-base-icon-spam:"&#9873;";
-$cu-base-icon-heart:"&hearts;";
-$cu-base-icon-ticket:"&#127915;";
-$cu-base-icon-thermometer:"&#128255;";
+$ws-base-icon-calendar:"&#128197;";
+$ws-base-icon-cycle:"&#128260;";
+$ws-base-icon-reccurent:"&#59249;";
+$ws-base-icon-clock:"&#128340;";
+$ws-base-icon-location:"&#59172;";
+$ws-base-icon-users:"&#128101;";
+$ws-base-icon-adduser:"&#59136;";
+$ws-base-icon-bubble:"&#59160;";
+$ws-base-icon-bubbles:"&#59168;";
+$ws-base-icon-key:"&#128273;";
+$ws-base-icon-question:"&#10067;";
+$ws-base-icon-book:"&#128213;";
+$ws-base-icon-camera:"&#128247;";
+$ws-base-icon-lock:"&#128274;";
+$ws-base-icon-unlock:"&#128275;";
+$ws-base-icon-signin:"&#59200;";
+$ws-base-icon-signout:"&#59201;";
+$ws-base-icon-check:"&#10003;";
+$ws-base-icon-folder:"#&#128193";
+$ws-base-icon-keyboard:"&#9000;";
+$ws-base-icon-phone:"&#128222;";
+$ws-base-icon-like:"&#128077;";
+$ws-base-icon-dislike:"&#128078;";
+$ws-base-icon-eye:"&#59146;";
+$ws-base-icon-education:"&#127891;";
+$ws-base-icon-clockwork:"&#9881;";
+$ws-base-icon-spam:"&#9873;";
+$ws-base-icon-heart:"&hearts;";
+$ws-base-icon-ticket:"&#127915;";
+$ws-base-icon-thermometer:"&#128255;";
+
+/* typography */
+$ws-base-font-family:"Helvetica Neue, Lucida Grande, Lucida";
+
+/* inputs */
+$ws-base-input-text-background:white;
+$ws-base-input-text-border:1px solid rgba(black,.12);
+$ws-base-input-text-margin:0 0 0 0;
+$ws-base-input-text-outline:none;
+$ws-base-input-text-radius:2px 2px 2px 2px;
+$ws-base-input-text-borderbox:unquote("border-box");
